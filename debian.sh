@@ -18,8 +18,8 @@ add-apt-repository ppa:chris-lea/node.js
 apt-get update
 apt-get install -y nodejs
 
-# # ruby / rails / rvm
-curl -sSL https://get.rvm.io | bash -s stable --rails --autolibs=enable && echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc && source /usr/local/rvm/scripts/rvm
+# ruby / rails / rvm
+curl -sSL https://get.rvm.io | bash -s stable --rails --autolibs=enable && chown -R 1000 /usr/local/rvm && echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc && source /usr/local/rvm/scripts/rvm
 
 # heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
