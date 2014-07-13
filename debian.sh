@@ -1,6 +1,6 @@
 # updates
-apt-get update && apt-get upgrade
-apt-get dist-upgrade
+apt-get update && apt-get upgrade -y
+apt-get dist-upgrade -y
 
 # general dev / libs
 apt-get install -y build-essential
@@ -16,10 +16,10 @@ rm chrome.deb
 apt-get install -y python-software-properties python g++ make
 add-apt-repository ppa:chris-lea/node.js
 apt-get update
-apt-get install nodejs
+apt-get install -y nodejs
 
-# ruby / rails / rvm
-curl -sSL https://get.rvm.io | bash -s stable --rails --autolibs=enable
+# # ruby / rails / rvm
+curl -sSL https://get.rvm.io | bash -s stable --rails --autolibs=enable && echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc && source /usr/local/rvm/scripts/rvm
 
 # heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
